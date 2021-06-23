@@ -1,4 +1,4 @@
-# tip-calculator
+# Let's print "Hello Name"
 
 [ 코딩 트레이닝을 통한 hello name! ]
 <br />
