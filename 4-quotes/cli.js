@@ -3,7 +3,7 @@
 // 2. output : SOMEONE name
 // 3. SOMEONE name says : blah blha~~
 
-const { RSA_NO_PADDING } = require("constants");
+// const { RSA_NO_PADDING } = require("constants");
 const readline = require("readline");
 
 const rl = readline.createInterface({
@@ -11,7 +11,7 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
-const name = rl.question(`Who said it? `, (name) => {
+rl.question(`Who said it? `, (name) => {
   console.log(`${name}~!!`);
 
   rl.question(`What dose he(she) said? `, (says) => {
