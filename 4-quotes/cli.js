@@ -3,7 +3,6 @@
 // 2. output : SOMEONE name
 // 3. SOMEONE name says : blah blha~~
 
-// const { RSA_NO_PADDING } = require("constants");
 const readline = require("readline");
 
 const rl = readline.createInterface({
