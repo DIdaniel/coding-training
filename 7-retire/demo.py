@@ -1,4 +1,12 @@
 '''
+int & int
+int | int
+소수점 & 소수점
+소수점 | 소수점
+not int & not int
+a > b
+
+
 test int
   currentAge => 25
   retireAge => 65
@@ -57,6 +65,8 @@ currentYear = get_int_input(dateTime.today().year)
 
 # [ output ]
 
+
+
 import datetime
 
 current = input("현재 나이는?")
@@ -73,7 +83,7 @@ if (isinstance(int(current) & int(retireAge), int)):
     f" You have {retireAge - current} years left until you can retire. It's {currentYear}, so you can retire in {currentYear + (retireAge - current)} "
   )
   
-  elif (isinstance(int(current) or int(retireAge), int)):
+  elif (isinstance(int(current) or int(retireAge), str)):
     print("숫자를 입력해주세요")
     exit()
   elif (current > retireAge):
