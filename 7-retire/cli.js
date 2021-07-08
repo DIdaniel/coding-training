@@ -34,7 +34,6 @@ It's ${currentYear}, so you can retire in ${currentYear + (retireAge - currentAg
 
 /*
 
-
 // // [ input ]
 // const currentAge = prompt("현재 나이는?");
 // console.log(typeof currentAge);
@@ -69,13 +68,11 @@ const rl = readline.createInterface({
   output: process.stdout,
 });
 
+// 소수점 나올 때 ...
+
 rl.question(`현재 나이는? `, (currentAge) => {
   rl.question(`퇴직 나이는? `, (retireAge) => {
-    if (
-      parseInt(currentAge) &&
-      parseInt(retireAge) &&
-      Number.isInteger === true
-    ) {
+    if (parseInt(currentAge) && parseInt(retireAge)) {
       const now = new Date();
       const currentYear = now.getFullYear();
 
@@ -93,9 +90,9 @@ rl.question(`현재 나이는? `, (currentAge) => {
       console.log("이미 퇴직 하셨네요!");
       process.exit(0);
     } else if (!parseInt(currentAge) && !parseInt(retireAge)) {
-      console.log("숫자로 입력해주세요");
+      console.log("숫자를 입력해주세요");
       process.exit(0);
-    } else if (!isInteger) {
+    } else if (!Number.isInteger(currentAge) || !Number.isInteger(retireAge)) {
       console.log("정수로 입력해주세요!");
       process.exit(0);
     } else {

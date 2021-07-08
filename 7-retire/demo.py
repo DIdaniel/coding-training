@@ -65,14 +65,20 @@ currentYear = get_int_input(dateTime.today().year)
 
 # [ output ]
 
-
+# int & int
+# int | int
+# a > b
+# 소수점 & 소수점
+# 소수점 | 소수점
+# not int & not int
 
 import datetime
 
 current = input("현재 나이는?")
 retireAge = input("퇴직 나이는?")
 
-if (isinstance(int(current) & int(retireAge), int)):
+if (int(current) & int(retireAge)):
+  # year
   now = datetime.datetime.now()
   currentYear = now.year
 
@@ -80,21 +86,20 @@ if (isinstance(int(current) & int(retireAge), int)):
   leftYear = int(currentYear) + int(leftAge)
   
   print(
-    f" You have {retireAge - current} years left until you can retire. It's {currentYear}, so you can retire in {currentYear + (retireAge - current)} "
+    f" You have {leftAge} years left until you can retire. It's {currentYear}, so you can retire in {leftYear} "
   )
-  
-  elif (isinstance(int(current) or int(retireAge), str)):
-    print("숫자를 입력해주세요")
-    exit()
-  elif (current > retireAge):
-    print("이미 퇴직하셨네요!")
-    exit()
-  elif (not (int(current) & int(retireAge))):
-    print('숫자를 입력해주세요!')
-    exit()
-  elif (not isinstance(int(current) and int(retireAge), int)):
-    print('정수를 입력해주세요')
-    exit()
-  else:
-    print("Error! Plz turn off and on")
-    exit()
+elif (int(current) | int(retireAge)):
+  print("숫자를 입력해주세요")
+  exit()
+elif (int(current) > int(retireAge)):
+  print("이미 퇴직하셨네요!")
+  exit()
+elif (not (int(current) & int(retireAge))):
+  print('숫자를 입력해주세요!')
+  exit()
+elif (not (int(current) | int(retireAge))):
+  print('정수를 입력해주세요')
+  exit()
+else:
+  print("Error! Plz turn off and on again")
+  exit()
